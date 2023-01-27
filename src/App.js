@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { LandingPage } from "./Components/LandingPage";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { useState } from 'react';
 
 function App() {
+
+  const [mode, setMode] = useState("dark");
+
+  const getDesignTokens = (mode) => ({
+    palette: {
+      mode,
+      ...(mode === "dark" && {
+        primary: {
+          main: "#7986cb",
+          background: "#eeeeee"
+        },
+        secondary: {
+          main: "#f50057",
+        },
+      }),
+      ...(mode === "light" && {
+        primary: {
+          main: "#303f9f",
+        },
+        secondary: {
+          main: "#f50057",
+        },
+      }),
+
+    },
+  });
+
+  const darkModeTheme = createTheme(getDesignTokens(mode));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ThemeProvider theme={darkModeTheme}>
+
+        <Routes>
+          <Route path='/' element={<LandingPage mode={mode} setMode={setMode} />} />
+        </Routes>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
