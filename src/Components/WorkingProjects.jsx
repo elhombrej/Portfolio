@@ -1,5 +1,8 @@
-import { Grid, Typography } from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
+import coworkingProjectPhoto from '../images/coworkingProjectPhoto.png';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 export function WorkingProjects() {
     return (
@@ -34,26 +37,58 @@ export function WorkingProjects() {
                     paddingTop={3}
                     spacing={4}
                 >
-                    <Grid
-                        item
-                    >
-                    </Grid>
 
                     <Grid
                         item
                     >
-                        <Typography
-                            variant='h5'
-                            fontFamily='monospace'
-                            fontWeight='bold'
-                        >
-                            Nothing here yet
-                        </Typography>
-                    </Grid>
+                        <Card
+                            sx={{
+                                maxWidth: 300,
+                                minHeight: 300
+                            }}>
+                            <CardMedia
+                                component="img"
+                                alt="Pokemon project"
+                                height="140"
+                                image={coworkingProjectPhoto}
+                            />
+                            <CardContent>
 
+                                <Typography
+                                    gutterBottom
+                                    variant="h5"
+                                    component="div"
+                                    fontFamily='monospace'
+                                >
+                                    Coworking medical companion
+                                </Typography>
+
+                                <Typography
+                                    variant="body1"
+                                    color="text.secondary"
+                                    fontFamily='monospace'
+                                >
+                                    Individual project developed on Material UI, Redux and React JavaScript and PostgreSQL.
+                                </Typography>
+
+                            </CardContent>
+
+                            <CardActions>
+                                <Button sx={{ textDecoration: 'none' }}>
+                                    <a href='https://github.com/elhombrej/Coworking-medical-companion'>
+                                        <GitHubIcon />
+                                    </a>
+                                </Button>
+
+                            </CardActions>
+                        </Card>
+                    </Grid>
 
                 </Grid>
+
             </Grid>
+
+
 
         </Grid>
     )

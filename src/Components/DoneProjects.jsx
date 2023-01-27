@@ -12,12 +12,12 @@ export function DoneProjects() {
 
     return (
         <Grid
-        container
-        direction='column'
-        justifyContent="flex-start"
-        alignItems="center"
-        paddingTop={3}
-        spacing={4}
+            container
+            direction='column'
+            justifyContent="flex-start"
+            alignItems="center"
+            paddingTop={3}
+            spacing={4}
         >
             <Grid
                 item
@@ -49,7 +49,7 @@ export function DoneProjects() {
                         <Card
                             sx={{
                                 maxWidth: 300,
-                                height: 300
+                                minHeght: 300
                             }}>
                             <CardMedia
                                 component="img"
@@ -73,13 +73,13 @@ export function DoneProjects() {
                                     color="text.secondary"
                                     fontFamily='monospace'
                                 >
-                                    Individual project developed on plain CSS, Redux and React JavaScript, using pokemon API.
+                                    Individual project developed on plain CSS, Redux and React JavaScript, using pokemon API and PostgreSQL.
                                 </Typography>
 
                             </CardContent>
 
                             <CardActions>
-                                <Button sx={{textDecoration:'none'}}>
+                                <Button sx={{ textDecoration: 'none' }}>
                                     <a href='https://github.com/elhombrej/sleep-tracker'>
                                         <GitHubIcon />
                                     </a>
@@ -101,7 +101,7 @@ export function DoneProjects() {
                         <Card
                             sx={{
                                 maxWidth: 300,
-                                height: 300
+                                minHeght: 300
                             }}>
                             <CardMedia
                                 component="img"
@@ -125,7 +125,7 @@ export function DoneProjects() {
                                     color="text.secondary"
                                     fontFamily='monospace'
                                 >
-                                    Groupal project developed on Material UI, Redux and React JavaScript, using FitBit API.
+                                    Groupal project developed on Material UI, Redux and React JavaScript, using FitBit API and PostgreSQL.
                                 </Typography>
 
                             </CardContent>
@@ -156,8 +156,7 @@ export function DoneProjects() {
 
 const useStyles = makeStyles(() => ({
     decoration: {
-        textDecoration:'none'
+        textDecoration: 'none'
     },
 
-  }));
-  
+}));
