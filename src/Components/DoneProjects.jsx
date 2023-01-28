@@ -7,20 +7,57 @@ import candyShopTerminalPhoto from '../images/candyShopTerminalPhoto.png'
 import portfolioPhoto from '../images/portfolioPhoto.png'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
-import { makeStyles } from "@mui/styles";
 
 export function DoneProjects() {
 
-    const classes = useStyles();
+    const cardInfo = [
+        {
+            image: sleepTrackerPhoto,
+            title: 'Sleep tracker',
+            description: 'Groupal project developed on Material UI, Redux and React JavaScript, using FitBit API and PostgreSQL.',
+            gitHubButton: 'https://github.com/elhombrej/sleep-tracker.git',
+            webSiteButton: 'https://sleep-tracker-two.vercel.app',
+        },
+        {
+            image: pokemonProjectPhoto,
+            title: 'Pokemon project',
+            description: 'Individual project developed on plain CSS, Redux and React JavaScript, using pokemon API and PostgreSQL.',
+            gitHubButton: 'https://github.com/elhombrej/Pokemon-project.git',
+            webSiteButton: 'https://pi-pokemon-main-one.vercel.app',
+        },
+        {
+            image: candyShopInterfacePhoto,
+            title: 'Candy shop interface',
+            description: 'Groupal project developed on Java and Java Swing.',
+            gitHubButton: 'https://github.com/elhombrej/CandyShopInterface.git',
+            webSiteButton: '',
+        },
+        {
+            image: candyShopTerminalPhoto,
+            title: 'Candy shop terminal',
+            description: 'Individual project developed on plain Java.',
+            gitHubButton: 'https://github.com/elhombrej/CandyShopTerminal.git',
+            webSiteButton: '',
+        },
+        {
+            image: portfolioPhoto,
+            title: 'This portfolio',
+            description: 'Portfolio developed with React and Material UI.',
+            gitHubButton: 'https://github.com/elhombrej/Portfolio.git',
+            webSiteButton: '',
+        },
+
+    ]
 
     return (
         <Grid
             container
             direction='column'
-            justifyContent="flex-start"
+            justifyContent="center"
             alignItems="center"
             paddingTop={3}
             spacing={4}
+            sx={{maxWidth:{sm:'70vw', xs:'100vw'}}}
         >
             <Grid
                 item
@@ -47,258 +84,111 @@ export function DoneProjects() {
                     spacing={4}
                 >
 
-                    <Grid
-                        item
-                    >
-                        <Card
-                            sx={{
-                                maxWidth: 300,
-                                minHeght: 300
-                            }}>
-                            <CardMedia
-                                component="img"
-                                alt="sleep tracker project"
-                                height="140"
-                                image={sleepTrackerPhoto}
-                            />
-                            <CardContent>
-
-                                <Typography
-                                    gutterBottom
-                                    variant="h5"
-                                    component="div"
-                                    fontFamily='monospace'
+                    {cardInfo.map(element =>
+                        < Grid
+                            item
+                        >
+                            <Card
+                                sx={{
+                                    maxWidth: 300,
+                                    minHeight: 400,
+                                }}
+                            >
+                                <CardMedia
+                                    component="img"
+                                    alt={element.title}
+                                    height="140"
+                                    image={element.image}
+                                />
+                                <Grid
+                                    container
+                                    direction='column'
+                                    alignItems='center'
+                                    justifyContent='space-between'
                                 >
-                                    Sleep tracker
-                                </Typography>
 
-                                <Typography
-                                    variant="body1"
-                                    color="text.secondary"
-                                    fontFamily='monospace'
-                                >
-                                    Groupal project developed on Material UI, Redux and React JavaScript, using FitBit API and PostgreSQL.
-                                </Typography>
+                                    <Grid
+                                        item
+                                    >
+                                        <CardContent>
 
-                            </CardContent>
+                                            <Typography
+                                                gutterBottom
+                                                variant="h5"
+                                                component="div"
+                                                fontFamily='monospace'
+                                            >
+                                                {element.title}
+                                            </Typography>
 
-                            <CardActions>
-                                <Button>
-                                    <a href='https://github.com/elhombrej/sleep-tracker.git'>
-                                        <GitHubIcon />
-                                    </a>
-                                </Button>
+                                            <Typography
+                                                variant="body1"
+                                                color="text.secondary"
+                                                fontFamily='monospace'
+                                            >
+                                                {element.description}
+                                            </Typography>
 
-                                <Button>
-                                    <a href='https://sleep-tracker-two.vercel.app'>
-                                        <LaunchIcon />
-                                    </a>
-                                </Button>
+                                        </CardContent>
+                                    </Grid>
 
-                            </CardActions>
-                        </Card>
-                    </Grid>
+                                    <Grid
+                                        item
+                                    >
 
-                    <Grid
-                        item
-                    >
-                        <Card
-                            sx={{
-                                maxWidth: 300,
-                                minHeght: 300
-                            }}>
-                            <CardMedia
-                                component="img"
-                                alt="Pokemon project"
-                                height="140"
-                                image={pokemonProjectPhoto}
-                            />
-                            <CardContent>
+                                        <Grid
+                                            container
+                                            sx={{
+                                                direction: 'row',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-evenly',
+                                            }}
+                                            spacing={5}
+                                        >
+                                            {
+                                                element.gitHubButton !== '' &&
+                                                <Grid
+                                                    item
+                                                >
+                                                    <a href={element.gitHubButton}>
+                                                        <GitHubIcon
+                                                            sx={{
+                                                                fontSize: 40,
+                                                                // marginRight: 3
+                                                            }}
+                                                        />
+                                                    </a>
+                                                </Grid>
+                                            }
 
-                                <Typography
-                                    gutterBottom
-                                    variant="h5" c
-                                    omponent="div"
-                                    fontFamily='monospace'
-                                >
-                                    Pokemon project
-                                </Typography>
+                                            {
+                                                element.webSiteButton !== '' &&
+                                                <Grid
+                                                    item
+                                                >
+                                                    <a href={element.webSiteButton}>
+                                                        <LaunchIcon
+                                                            sx={{
+                                                                fontSize: 40,
+                                                                // marginLeft: 3
+                                                            }}
+                                                        />
+                                                    </a>
+                                                </Grid>
+                                            }
 
-                                <Typography
-                                    variant="body1"
-                                    color="text.secondary"
-                                    fontFamily='monospace'
-                                >
-                                    Individual project developed on plain CSS, Redux and React JavaScript, using pokemon API and PostgreSQL.
-                                </Typography>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
 
-                            </CardContent>
+                            </Card>
+                        </Grid >
 
-                            <CardActions>
-                                <Button sx={{ textDecoration: 'none' }}>
-                                    <a href='https://github.com/elhombrej/Pokemon-project.git'>
-                                        <GitHubIcon />
-                                    </a>
-                                </Button>
+                    )}
 
-                                <Button>
-                                    <a href='https://pi-pokemon-main-one.vercel.app'>
-                                        <LaunchIcon />
-                                    </a>
-                                </Button>
-
-                            </CardActions>
-                        </Card>
-                    </Grid>
-
-                    <Grid
-                        item
-                    >
-                        <Card
-                            sx={{
-                                maxWidth: 300,
-                                minHeght: 300
-                            }}>
-                            <CardMedia
-                                component="img"
-                                alt="Pokemon project"
-                                height="140"
-                                image={candyShopInterfacePhoto}
-                            />
-                            <CardContent>
-
-                                <Typography
-                                    gutterBottom
-                                    variant="h5" c
-                                    omponent="div"
-                                    fontFamily='monospace'
-                                >
-                                    Candy shop interface
-                                </Typography>
-
-                                <Typography
-                                    variant="body1"
-                                    color="text.secondary"
-                                    fontFamily='monospace'
-                                >
-                                    Groupal project developed on Java and Java Swing.
-                                </Typography>
-
-                            </CardContent>
-
-                            <CardActions>
-                                <Button sx={{ textDecoration: 'none' }}>
-                                    <a href='https://github.com/elhombrej/CandyShopInterface.git'>
-                                        <GitHubIcon />
-                                    </a>
-                                </Button>
-
-                            </CardActions>
-                        </Card>
-                    </Grid>
-
-                    <Grid
-                        item
-                    >
-                        <Card
-                            sx={{
-                                maxWidth: 300,
-                                minHeght: 300
-                            }}>
-                            <CardMedia
-                                component="img"
-                                alt="Pokemon project"
-                                height="140"
-                                image={candyShopTerminalPhoto}
-                            />
-                            <CardContent>
-
-                                <Typography
-                                    gutterBottom
-                                    variant="h5" c
-                                    omponent="div"
-                                    fontFamily='monospace'
-                                >
-                                    Candy shop terminal
-                                </Typography>
-
-                                <Typography
-                                    variant="body1"
-                                    color="text.secondary"
-                                    fontFamily='monospace'
-                                >
-                                    Individual project developed on plain Java.
-                                </Typography>
-
-                            </CardContent>
-
-                            <CardActions>
-                                <Button sx={{ textDecoration: 'none' }}>
-                                    <a href='https://github.com/elhombrej/CandyShopTerminal.git'>
-                                        <GitHubIcon />
-                                    </a>
-                                </Button>
-
-                            </CardActions>
-                        </Card>
-                    </Grid>
-
-                    <Grid
-                        item
-                    >
-                        <Card
-                            sx={{
-                                maxWidth: 300,
-                                minHeght: 300
-                            }}>
-                            <CardMedia
-                                component="img"
-                                alt="Pokemon project"
-                                height="140"
-                                image={portfolioPhoto}
-                            />
-                            <CardContent>
-
-                                <Typography
-                                    gutterBottom
-                                    variant="h5" c
-                                    omponent="div"
-                                    fontFamily='monospace'
-                                >
-                                    This portfolio
-                                </Typography>
-
-                                <Typography
-                                    variant="body1"
-                                    color="text.secondary"
-                                    fontFamily='monospace'
-                                >
-                                    Portfolio developed with React and Material UI.
-                                </Typography>
-
-                            </CardContent>
-
-                            <CardActions>
-                                <Button sx={{ textDecoration: 'none' }}>
-                                    <a href='https://github.com/elhombrej/Portfolio.git'>
-                                        <GitHubIcon />
-                                    </a>
-                                </Button>
-
-                            </CardActions>
-                        </Card>
-                    </Grid>
-                
                 </Grid>
             </Grid>
 
         </Grid>
     )
 };
-
-const useStyles = makeStyles(() => ({
-    decoration: {
-        textDecoration: 'none'
-    },
-
-}));

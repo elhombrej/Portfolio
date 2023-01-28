@@ -34,7 +34,7 @@ export function Knowledge() {
             justifyContent="flex-start"
             alignItems="center"
             paddingTop={3}
-            spacing={4}
+            // spacing={4}
         >
             <Grid
                 item

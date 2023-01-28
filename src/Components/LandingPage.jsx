@@ -1,14 +1,13 @@
-import { BottomNavigation, BottomNavigationAction, Card, CardContent, Grid, Paper, Switch, Typography } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Card, CardContent, Grid, Paper, Switch } from "@mui/material";
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import CodeIcon from '@mui/icons-material/Code';
-import { useNavigate } from "react-router-dom";
 import InfoIcon from '@mui/icons-material/Info';
 import HardwareIcon from '@mui/icons-material/Hardware';
-import { Main } from "./Main";
+import { Information } from "./Information";
 import { useTheme } from "@mui/material/styles";
 import { DoneProjects } from "./DoneProjects";
 import { WorkingProjects } from "./WorkingProjects";
@@ -18,7 +17,7 @@ export function LandingPage({ mode, setMode }) {
 
     const [checked, setChecked] = useState(true);
 
-    const [currentPage, setCurrentPage] = React.useState(<Main />);
+    const [currentPage, setCurrentPage] = React.useState(<Information />);
 
     const [value, setValue] = useState(0);
 
@@ -33,8 +32,6 @@ export function LandingPage({ mode, setMode }) {
         setCurrentPage(element)
     };
 
-    let navigate = useNavigate();
-
     const theme = useTheme();
 
     return (
@@ -42,6 +39,7 @@ export function LandingPage({ mode, setMode }) {
             sx={{
                 minHeight: '100vh',
             }}
+            xs={12}
         >
 
             <Helmet>
@@ -54,10 +52,13 @@ export function LandingPage({ mode, setMode }) {
                 justifyContent="center"
                 alignItems="center"
                 paddingTop={3}
-                spacing={4}
+                // spacing={4}
+                xs={12}
             >
                 <Grid
                     item
+                    paddingTop={4}
+                    paddingBottom={4}
                 >
                     <Brightness7Icon />
                     <Switch checked={checked} onChange={handleChange} />
@@ -68,15 +69,15 @@ export function LandingPage({ mode, setMode }) {
                 <Grid
                     item
                     paddingBottom={10}
+                    xs={12}
                 >
                     <Card
                         variant='outlined'
                         sx={{
-                            // paddingBottom: 10,
                             backgroundColor:
                                 theme.palette.mode === "light" &&
                                 "#eeeeee",
-                            width: '60vw'
+                            // width: '100vw'
                         }}
                     >
                         <CardContent>
@@ -87,6 +88,7 @@ export function LandingPage({ mode, setMode }) {
 
                 <Grid
                     item
+                    xs={12}
                 >
                     <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
 
@@ -100,7 +102,7 @@ export function LandingPage({ mode, setMode }) {
                             <BottomNavigationAction
                                 label="Information"
                                 icon={<InfoIcon />}
-                                onClick={() => handleClick(<Main />)}
+                                onClick={() => handleClick(<Information />)}
                             />
 
                             <BottomNavigationAction

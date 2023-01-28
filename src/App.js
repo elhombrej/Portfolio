@@ -1,6 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { LandingPage } from "./Components/LandingPage";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import {
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from '@mui/material/styles';
 import { useState } from 'react';
 
 function App() {
@@ -27,15 +31,21 @@ function App() {
           main: "#f50057",
         },
       }),
-
     },
+    typography:{
+      // responsiveFontSizes(darkModeTheme)
+      fontFamily: ['monospace'],
+      fontWeight: ['bold']
+    }
   });
 
   const darkModeTheme = createTheme(getDesignTokens(mode));
 
   return (
     <BrowserRouter>
-      <ThemeProvider theme={darkModeTheme}>
+      <ThemeProvider 
+      theme={darkModeTheme}
+      >
 
         <Routes>
           <Route path='/' element={<LandingPage mode={mode} setMode={setMode} />} />

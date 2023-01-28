@@ -5,6 +5,17 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 
 export function WorkingProjects() {
+
+    const cardInfo = [
+        {
+            image: coworkingProjectPhoto,
+            title: 'Coworking medical companion',
+            description: 'Individual project developed on Material UI, Redux and React JavaScript and PostgreSQL.',
+            gitHubButton: 'https://github.com/elhombrej/Coworking-medical-companion',
+            webSiteButton: '',
+        },
+    ];
+
     return (
         <Grid
             container
@@ -22,8 +33,9 @@ export function WorkingProjects() {
                     fontFamily='monospace'
                     fontWeight='bold'
                 >
-                    Working projects
+                    Done projects
                 </Typography>
+
             </Grid>
 
             <Grid
@@ -38,58 +50,110 @@ export function WorkingProjects() {
                     spacing={4}
                 >
 
-                    <Grid
-                        item
-                    >
-                        <Card
-                            sx={{
-                                maxWidth: 300,
-                                minHeight: 300
-                            }}>
-                            <CardMedia
-                                component="img"
-                                alt="Pokemon project"
-                                height="140"
-                                image={coworkingProjectPhoto}
-                            />
-                            <CardContent>
-
-                                <Typography
-                                    gutterBottom
-                                    variant="h5"
-                                    component="div"
-                                    fontFamily='monospace'
+                    {cardInfo.map(element =>
+                        < Grid
+                            item
+                        >
+                            <Card
+                                sx={{
+                                    maxWidth: 300,
+                                    minHeight: 400,
+                                }}
+                            >
+                                <CardMedia
+                                    component="img"
+                                    alt={element.title}
+                                    height="140"
+                                    image={element.image}
+                                />
+                                <Grid
+                                    container
+                                    direction='column'
+                                    alignItems='center'
+                                    justifyContent='space-between'
                                 >
-                                    Coworking medical companion
-                                </Typography>
 
-                                <Typography
-                                    variant="body1"
-                                    color="text.secondary"
-                                    fontFamily='monospace'
-                                >
-                                    Individual project developed on Material UI, Redux and React JavaScript and PostgreSQL.
-                                </Typography>
+                                    <Grid
+                                        item
+                                    >
+                                        <CardContent>
 
-                            </CardContent>
+                                            <Typography
+                                                gutterBottom
+                                                variant="h5"
+                                                component="div"
+                                                fontFamily='monospace'
+                                            >
+                                                {element.title}
+                                            </Typography>
 
-                            <CardActions>
-                                <Button sx={{ textDecoration: 'none' }}>
-                                    <a href='https://github.com/elhombrej/Coworking-medical-companion'>
-                                        <GitHubIcon />
-                                    </a>
-                                </Button>
+                                            <Typography
+                                                variant="body1"
+                                                color="text.secondary"
+                                                fontFamily='monospace'
+                                            >
+                                                {element.description}
+                                            </Typography>
 
-                            </CardActions>
-                        </Card>
-                    </Grid>
+                                        </CardContent>
+                                    </Grid>
+
+                                    <Grid
+                                        item
+                                    >
+
+                                        <Grid
+                                            container
+                                            sx={{
+                                                direction: 'row',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-evenly',
+                                            }}
+                                            spacing={5}
+                                        >
+                                            {
+                                                element.gitHubButton !== '' &&
+                                                <Grid
+                                                    item
+                                                >
+                                                    <a href={element.gitHubButton}>
+                                                        <GitHubIcon
+                                                            sx={{
+                                                                fontSize: 40,
+                                                            }}
+                                                        />
+                                                    </a>
+                                                </Grid>
+                                            }
+
+                                            {
+                                                element.webSiteButton !== '' &&
+                                                <Grid
+                                                    item
+                                                >
+                                                    <a href={element.webSiteButton}>
+                                                        <LaunchIcon
+                                                            sx={{
+                                                                fontSize: 40,
+                                                            }}
+                                                        />
+                                                    </a>
+                                                </Grid>
+                                            }
+
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+
+                            </Card>
+                        </Grid >
+
+                    )}
 
                 </Grid>
-
             </Grid>
 
-
-
         </Grid>
+
     )
 };

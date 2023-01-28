@@ -1,19 +1,19 @@
 import { Avatar, Grid, Typography } from "@mui/material";
 import React from "react";
 
-export function Main() {
+export function Information() {
 
     const gitHubImage = "https://avatars.githubusercontent.com/u/94816708?v=4";
 
     return (
+
         <Grid
             container
             direction='column'
             justifyContent="center"
-            alignItems="center"
+            alignItems='center'
             paddingTop={4}
             spacing={4}
-            minHeight='600px'
         >
             <Grid
                 item
@@ -35,10 +35,11 @@ export function Main() {
                 item
             >
                 <Typography
-                    variant='h1'
-                    component='h1'
+                    sx={{
+                        typography: { xs: 'h5', sm: 'h3', md: 'h2', lg: 'h2'},
+                    }}
                     fontWeight='bold'
-                    fontFamily='monospace'
+
                 >
                     Joaquin Padron
                 </Typography>
@@ -48,9 +49,12 @@ export function Main() {
                 item
             >
                 <Typography
-                    variant='h5'
                     fontWeight='bold'
-                    fontFamily='monospace'
+                    component='h1'
+                    sx={{
+                        typography: { xs: 'h6', sm: 'h4', md: 'h4', lg: 'h4' },
+                    }}
+
                 >
                     Web developer
                 </Typography>
@@ -75,8 +79,9 @@ export function Main() {
 
                         <a href='mailto:Joaquinpadron@outlook.com?subject=Me&body=Hello Joaquin!'>
                             <Typography
-                                variant='h6'
-                                fontFamily='monospace'
+                                sx={{
+                                    typography: { xs: 'body2', sm: 'h6', md: 'h6' },
+                                }}
                             >
                                 Joaquinpadron@outlook.com
                             </Typography>
@@ -90,8 +95,9 @@ export function Main() {
 
                         <a href='https://www.linkedin.com/in/joaqu%C3%ADn-padr%C3%B3n-4b883b138'>
                             <Typography
-                                variant='h6'
-                                fontFamily='monospace'
+                                sx={{
+                                    typography: { xs: 'body2', sm: 'h6', md: 'h6' },
+                                }}
                             >
                                 LinkedIn
                             </Typography>
@@ -103,8 +109,10 @@ export function Main() {
                         item
                     >
                         <Typography
-                            variant='h6'
-                            fontFamily='monospace'
+                            sx={{
+                                typography: { xs: 'body2', sm: 'h6', md: 'h6' },
+                            }}
+                            // color='#388e3c'
                         >
                             WhatsApp (+54)1138531167
                         </Typography>
@@ -118,3 +126,4 @@ export function Main() {
         </Grid>
     )
 };
+
