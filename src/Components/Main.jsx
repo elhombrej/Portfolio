@@ -36,6 +36,7 @@ export function Main() {
             >
                 <Typography
                     variant='h1'
+                    component='h1'
                     fontWeight='bold'
                     fontFamily='monospace'
                 >
