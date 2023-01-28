@@ -2,6 +2,8 @@ import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } f
 import React from "react";
 import sleepTrackerPhoto from '../images/sleepTrackerPhoto.png'
 import pokemonProjectPhoto from '../images/pokemonProjectPhoto.png'
+import candyShopInterfacePhoto from '../images/candyShopInterfacePhoto.png'
+import candyShopTerminalPhoto from '../images/candyShopTerminalPhoto.png'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { makeStyles } from "@mui/styles";
@@ -43,57 +45,6 @@ export function DoneProjects() {
                     paddingTop={3}
                     spacing={4}
                 >
-                    <Grid
-                        item
-                    >
-                        <Card
-                            sx={{
-                                maxWidth: 300,
-                                minHeght: 300
-                            }}>
-                            <CardMedia
-                                component="img"
-                                alt="Pokemon project"
-                                height="140"
-                                image={pokemonProjectPhoto}
-                            />
-                            <CardContent>
-
-                                <Typography
-                                    gutterBottom
-                                    variant="h5" c
-                                    omponent="div"
-                                    fontFamily='monospace'
-                                >
-                                    Pokemon project
-                                </Typography>
-
-                                <Typography
-                                    variant="body1"
-                                    color="text.secondary"
-                                    fontFamily='monospace'
-                                >
-                                    Individual project developed on plain CSS, Redux and React JavaScript, using pokemon API and PostgreSQL.
-                                </Typography>
-
-                            </CardContent>
-
-                            <CardActions>
-                                <Button sx={{ textDecoration: 'none' }}>
-                                    <a href='https://github.com/elhombrej/sleep-tracker'>
-                                        <GitHubIcon />
-                                    </a>
-                                </Button>
-
-                                <Button>
-                                    <a href='https://pi-pokemon-main-one.vercel.app'>
-                                        <LaunchIcon />
-                                    </a>
-                                </Button>
-
-                            </CardActions>
-                        </Card>
-                    </Grid>
 
                     <Grid
                         item
@@ -132,7 +83,7 @@ export function DoneProjects() {
 
                             <CardActions>
                                 <Button>
-                                    <a href='https://github.com/elhombrej/sleep-tracker'>
+                                    <a href='https://github.com/elhombrej/sleep-tracker.git'>
                                         <GitHubIcon />
                                     </a>
                                 </Button>
@@ -147,6 +98,150 @@ export function DoneProjects() {
                         </Card>
                     </Grid>
 
+                    <Grid
+                        item
+                    >
+                        <Card
+                            sx={{
+                                maxWidth: 300,
+                                minHeght: 300
+                            }}>
+                            <CardMedia
+                                component="img"
+                                alt="Pokemon project"
+                                height="140"
+                                image={pokemonProjectPhoto}
+                            />
+                            <CardContent>
+
+                                <Typography
+                                    gutterBottom
+                                    variant="h5" c
+                                    omponent="div"
+                                    fontFamily='monospace'
+                                >
+                                    Pokemon project
+                                </Typography>
+
+                                <Typography
+                                    variant="body1"
+                                    color="text.secondary"
+                                    fontFamily='monospace'
+                                >
+                                    Individual project developed on plain CSS, Redux and React JavaScript, using pokemon API and PostgreSQL.
+                                </Typography>
+
+                            </CardContent>
+
+                            <CardActions>
+                                <Button sx={{ textDecoration: 'none' }}>
+                                    <a href='https://github.com/elhombrej/Pokemon-project.git'>
+                                        <GitHubIcon />
+                                    </a>
+                                </Button>
+
+                                <Button>
+                                    <a href='https://pi-pokemon-main-one.vercel.app'>
+                                        <LaunchIcon />
+                                    </a>
+                                </Button>
+
+                            </CardActions>
+                        </Card>
+                    </Grid>
+
+                    <Grid
+                        item
+                    >
+                        <Card
+                            sx={{
+                                maxWidth: 300,
+                                minHeght: 300
+                            }}>
+                            <CardMedia
+                                component="img"
+                                alt="Pokemon project"
+                                height="140"
+                                image={candyShopInterfacePhoto}
+                            />
+                            <CardContent>
+
+                                <Typography
+                                    gutterBottom
+                                    variant="h5" c
+                                    omponent="div"
+                                    fontFamily='monospace'
+                                >
+                                    Candy shop interface
+                                </Typography>
+
+                                <Typography
+                                    variant="body1"
+                                    color="text.secondary"
+                                    fontFamily='monospace'
+                                >
+                                    Groupal project developed on Java and Java Swing.
+                                </Typography>
+
+                            </CardContent>
+
+                            <CardActions>
+                                <Button sx={{ textDecoration: 'none' }}>
+                                    <a href='https://github.com/elhombrej/CandyShopInterface.git'>
+                                        <GitHubIcon />
+                                    </a>
+                                </Button>
+
+                            </CardActions>
+                        </Card>
+                    </Grid>
+
+                    <Grid
+                        item
+                    >
+                        <Card
+                            sx={{
+                                maxWidth: 300,
+                                minHeght: 300
+                            }}>
+                            <CardMedia
+                                component="img"
+                                alt="Pokemon project"
+                                height="140"
+                                image={candyShopTerminalPhoto}
+                            />
+                            <CardContent>
+
+                                <Typography
+                                    gutterBottom
+                                    variant="h5" c
+                                    omponent="div"
+                                    fontFamily='monospace'
+                                >
+                                    Candy shop terminal
+                                </Typography>
+
+                                <Typography
+                                    variant="body1"
+                                    color="text.secondary"
+                                    fontFamily='monospace'
+                                >
+                                    Individual project developed on plain Java.
+                                </Typography>
+
+                            </CardContent>
+
+                            <CardActions>
+                                <Button sx={{ textDecoration: 'none' }}>
+                                    <a href='https://github.com/elhombrej/CandyShopTerminal.git'>
+                                        <GitHubIcon />
+                                    </a>
+                                </Button>
+
+                            </CardActions>
+                        </Card>
+                    </Grid>
+                
                 </Grid>
             </Grid>
 
