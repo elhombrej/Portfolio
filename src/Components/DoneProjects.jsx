@@ -4,6 +4,7 @@ import sleepTrackerPhoto from '../images/sleepTrackerPhoto.png'
 import pokemonProjectPhoto from '../images/pokemonProjectPhoto.png'
 import candyShopInterfacePhoto from '../images/candyShopInterfacePhoto.png'
 import candyShopTerminalPhoto from '../images/candyShopTerminalPhoto.png'
+import portfolioPhoto from '../images/portfolioPhoto.png'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { makeStyles } from "@mui/styles";
@@ -234,6 +235,52 @@ export function DoneProjects() {
                             <CardActions>
                                 <Button sx={{ textDecoration: 'none' }}>
                                     <a href='https://github.com/elhombrej/CandyShopTerminal.git'>
+                                        <GitHubIcon />
+                                    </a>
+                                </Button>
+
+                            </CardActions>
+                        </Card>
+                    </Grid>
+
+                    <Grid
+                        item
+                    >
+                        <Card
+                            sx={{
+                                maxWidth: 300,
+                                minHeght: 300
+                            }}>
+                            <CardMedia
+                                component="img"
+                                alt="Pokemon project"
+                                height="140"
+                                image={portfolioPhoto}
+                            />
+                            <CardContent>
+
+                                <Typography
+                                    gutterBottom
+                                    variant="h5" c
+                                    omponent="div"
+                                    fontFamily='monospace'
+                                >
+                                    This portfolio
+                                </Typography>
+
+                                <Typography
+                                    variant="body1"
+                                    color="text.secondary"
+                                    fontFamily='monospace'
+                                >
+                                    Portfolio developed with React and Material UI.
+                                </Typography>
+
+                            </CardContent>
+
+                            <CardActions>
+                                <Button sx={{ textDecoration: 'none' }}>
+                                    <a href='https://github.com/elhombrej/Portfolio.git'>
                                         <GitHubIcon />
                                     </a>
                                 </Button>

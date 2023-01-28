@@ -40,7 +40,7 @@ export function LandingPage({ mode, setMode }) {
     return (
         <Paper
             sx={{
-                minHeight: '110vh'
+                minHeight: '100vh',
             }}
         >
 
