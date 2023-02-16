@@ -33,7 +33,7 @@ export function WorkingProjects() {
                     fontFamily='monospace'
                     fontWeight='bold'
                 >
-                    Done projects
+                    Working projects
                 </Typography>
 
             </Grid>
