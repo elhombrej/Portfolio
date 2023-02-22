@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { LandingPage } from "./Components/LandingPage";
 import {
   createTheme,
-  responsiveFontSizes,
+  //responsiveFontSizes,
   ThemeProvider,
 } from '@mui/material/styles';
 import { useState } from 'react';
@@ -36,7 +36,8 @@ function App() {
       // responsiveFontSizes(darkModeTheme)
       fontFamily: ['monospace'],
       fontWeight: ['bold']
-    }
+    },
+
   });
 
   const darkModeTheme = createTheme(getDesignTokens(mode));

@@ -61,7 +61,10 @@ export function LandingPage({ mode, setMode }) {
                     paddingBottom={4}
                 >
                     <Brightness7Icon />
-                    <Switch checked={checked} onChange={handleChange} />
+                    <Switch
+                        checked={checked}
+                        onChange={handleChange}
+                    />
                     <Brightness4Icon />
 
                 </Grid>
