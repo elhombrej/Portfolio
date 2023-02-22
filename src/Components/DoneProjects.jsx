@@ -10,7 +10,7 @@ import sleepTrackerPhoto from "../Images/sleepTrackerPhoto.png";
 import pokemonProjectPhoto from "../Images/pokemonProjectPhoto.png";
 import candyShopInterfacePhoto from "../Images/candyShopInterfacePhoto.png";
 import candyShopTerminalPhoto from "../Images/candyShopTerminalPhoto.png";
-import elMapachePodas from "../Images/elMapachePodas.png";
+import elMapachePodasPhoto from "../Images/elMapachePodasPhoto.png";
 import portfolioPhoto from "../Images/portfolioPhoto.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
@@ -55,7 +55,7 @@ export function DoneProjects() {
       webSiteButton: "",
     },
     {
-      image: elMapachePodas,
+      image: elMapachePodasPhoto,
       title: "El mapache podas",
       description:
         "Web page developed for tree pruning business with React, Material UI and React reveal.",
