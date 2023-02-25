@@ -7,6 +7,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import coworkingProjectPhoto from "../Images/coworkingProjectPhoto.png";
+import devexPhoto from "../Images/devexPhoto.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 
@@ -18,7 +19,15 @@ export function WorkingProjects() {
       description:
         "Individual project developed on Material UI, Redux and React JavaScript and PostgreSQL.",
       gitHubButton: "https://github.com/elhombrej/Coworking-medical-companion",
-      webSiteButton: "",
+      webSiteButton: "https://devex-video.vercel.app",
+    },
+    {
+      image: devexPhoto,
+      title: "DEVEX",
+      description:
+        "Individual project developed on Material UI and React JavaScript for media bussiness.",
+      gitHubButton: "https://github.com/elhombrej/DEVEX.git",
+      webSiteButton: "https://devex-video.vercel.app",
     },
   ];
 
