@@ -11,19 +11,55 @@ import pokemonProjectPhoto from "../Images/pokemonProjectPhoto.png";
 import candyShopInterfacePhoto from "../Images/candyShopInterfacePhoto.png";
 import candyShopTerminalPhoto from "../Images/candyShopTerminalPhoto.png";
 import elMapachePodasPhoto from "../Images/elMapachePodasPhoto.png";
+import tekneDataBot from "../Images/tekneDataBot.png";
+import reginaPortfolio from "../Images/reginaPortfolio.png";
+import rutaDirecta from "../Images/rutaDirecta.png";
 import portfolioPhoto from "../Images/portfolioPhoto.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
+import devexPhoto from "../Images/devexPhoto.png";
 
 export function DoneProjects() {
   const cardInfo = [
     {
-      image: sleepTrackerPhoto,
-      title: "Sleep tracker",
+      image: tekneDataBot,
+      title: "Tekne Data Bot",
       description:
-        "Groupal project developed on Material UI, Redux and React JavaScript, using FitBit API and PostgreSQL.",
-      gitHubButton: "https://github.com/elhombrej/sleep-tracker.git",
-      webSiteButton: "https://sleep-tracker-two.vercel.app",
+        "Web page developed business purposes with React, Material UI, Ant Design and OpenAI API.",
+      gitHubButton: '',
+      webSiteButton: "https://tekne-data-labs.vercel.app",
+    },
+    {
+      image: reginaPortfolio,
+      title: "Regina Padron Portfolio",
+      description:
+        "Portfolio developed with plain HTML.",
+      gitHubButton: "https://github.com/elhombrej/lanenaweb.git",
+      webSiteButton: "https://reginapadron.vercel.app",
+    },
+    {
+      image: rutaDirecta,
+      title: "Ruta Directa",
+      description:
+        "Web App of geolocalization and map routing with React, Material UI, Ant Design and TomTom API.",
+      gitHubButton: '',
+      webSiteButton: "https://ruta-directa.vercel.app",
+    },
+    {
+      image: elMapachePodasPhoto,
+      title: "El mapache podas",
+      description:
+        "Web page developed for tree pruning business with React, Material UI and React reveal.",
+      gitHubButton: "https://github.com/elhombrej/PodasEnAltura.git",
+      webSiteButton: "https://el-mapache-podas.vercel.app",
+    },
+    {
+      image: devexPhoto,
+      title: "DEVEX",
+      description:
+        "Individual project developed on Material UI and React JavaScript for media bussiness.",
+      gitHubButton: "https://github.com/elhombrej/DEVEX.git",
+      webSiteButton: "https://devex-video.vercel.app",
     },
     {
       image: pokemonProjectPhoto,
@@ -32,6 +68,14 @@ export function DoneProjects() {
         "Individual project developed on plain CSS, Redux and React JavaScript, using pokemon API and PostgreSQL.",
       gitHubButton: "https://github.com/elhombrej/Pokemon-project.git",
       webSiteButton: "https://pi-pokemon-main-one.vercel.app",
+    },
+    {
+      image: sleepTrackerPhoto,
+      title: "Sleep tracker",
+      description:
+        "Groupal project developed on Material UI, Redux and React JavaScript, using FitBit API and PostgreSQL.",
+      gitHubButton: "https://github.com/elhombrej/sleep-tracker.git",
+      webSiteButton: "https://sleep-tracker-two.vercel.app",
     },
     {
       image: candyShopInterfacePhoto,
@@ -53,14 +97,6 @@ export function DoneProjects() {
       description: "Portfolio developed with React and Material UI.",
       gitHubButton: "https://github.com/elhombrej/Portfolio.git",
       webSiteButton: "",
-    },
-    {
-      image: elMapachePodasPhoto,
-      title: "El mapache podas",
-      description:
-        "Web page developed for tree pruning business with React, Material UI and React reveal.",
-      gitHubButton: "https://github.com/elhombrej/PodasEnAltura.git",
-      webSiteButton: "https://el-mapache-podas.vercel.app",
     },
   ];
 

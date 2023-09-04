@@ -7,9 +7,9 @@ import {
 } from "@mui/material";
 import React from "react";
 import coworkingProjectPhoto from "../Images/coworkingProjectPhoto.png";
-import devexPhoto from "../Images/devexPhoto.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
+import rutaDirecta from "../Images/rutaDirecta.png";
 
 export function WorkingProjects() {
   const cardInfo = [
@@ -22,13 +22,14 @@ export function WorkingProjects() {
       webSiteButton: "https://devex-video.vercel.app",
     },
     {
-      image: devexPhoto,
-      title: "DEVEX",
+      image: rutaDirecta,
+      title: "Ruta Directa",
       description:
-        "Individual project developed on Material UI and React JavaScript for media bussiness.",
-      gitHubButton: "https://github.com/elhombrej/DEVEX.git",
-      webSiteButton: "https://devex-video.vercel.app",
+        "Web App of geolocalization and map routing with React, Material UI, Ant Design and TomTom API.",
+      gitHubButton: '',
+      webSiteButton: "https://ruta-directa.vercel.app",
     },
+
   ];
 
   return (

@@ -3,28 +3,32 @@ import React from "react";
 
 export function Knowledge() {
   const tecnologies = [
-    '## "node": "12.18.3"',
-    '## "npm": "6.14.6"',
-    '## "axios": "1.2.0"',
-    '## "express": "4.18.2"',
-    '## "sequelize": "6.25.8"',
-    '## "react": "17.0.2"',
-    '## "redux": "4.0.5"',
-    "## JavaScript ECMASript 6",
-    "## Visual Studio Code",
-    "## pgAdmin4",
-    "## Postman",
-    "## Bash",
-    "## Zsh",
-    "## Material UI",
-    "## Vercel",
-    "## Railway",
-    "## Dbeaver",
-    "## Java",
-    "## Eclipse IDE",
-    "## InteliJ IDE",
-    "## GIT",
-    "## GitHub",
+    '- Node.js',
+    '- NPM',
+    '- axios',
+    '- Express',
+    '- Sequelize',
+    '- React',
+    '- Redux',
+    "- JavaScript ECMASript 6",
+    "- Visual Studio Code",
+    "- PgAdmin4",
+    "- Dbeaver",
+    "- SQL",
+    "- Postman",
+    "- Bash",
+    "- Zsh",
+    "- Material UI",
+    "- Ant Design",
+    "- Vercel",
+    "- Railway",
+    "- Microsoft Azure",
+    "- Java",
+    "- Eclipse IDE",
+    "- InteliJ IDE",
+    "- GIT",
+    "- GitHub",
+    "- APIs",
   ];
 
   return (
@@ -34,7 +38,7 @@ export function Knowledge() {
       justifyContent="flex-start"
       alignItems="center"
       paddingTop={3}
-      // spacing={4}
+    // spacing={4}
     >
       <Grid item>
         <Typography

@@ -1,4 +1,4 @@
-import { Avatar, Grid, Typography } from "@mui/material";
+import { Avatar, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 
 export function Information() {
