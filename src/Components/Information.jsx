@@ -71,7 +71,7 @@ export function Information() {
           </Grid>
 
           <Grid item>
-            <a href="https://www.linkedin.com/in/joaqu%C3%ADn-padr%C3%B3n-4b883b138">
+            <a href="https://www.linkedin.com/in/joaquinpadron">
               <Typography
                 sx={{
                   typography: { xs: "body2", sm: "h6", md: "h6" },
