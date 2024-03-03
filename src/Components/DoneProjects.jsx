@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
 import sleepTrackerPhoto from "../Images/sleepTrackerPhoto.png";
 import pokemonProjectPhoto from "../Images/pokemonProjectPhoto.png";
@@ -18,22 +12,48 @@ import portfolioPhoto from "../Images/portfolioPhoto.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 import devexPhoto from "../Images/devexPhoto.png";
+import piwoProjectPhoto from "../Images/piwoProjectPhoto.png";
+import cultivoInterparkProjectPhoto from "../Images/cultivoInterparkProjectPhoto.png";
+import flannerProjectPhoto from "../Images/flannerProjectPhoto.png";
 
 export function DoneProjects() {
   const cardInfo = [
     {
+      image: piwoProjectPhoto,
+      title: "Piwo Helados Page",
+      description:
+        "Web page developed business purposes with React and Material UI.",
+      gitHubButton: "",
+      webSiteButton: "https://piwohelados.com",
+    },
+    {
+      image: cultivoInterparkProjectPhoto,
+      title: "Cultivo Interpark Page",
+      description:
+        "Web page developed for business purposes with React and Material UI.",
+      gitHubButton: "",
+      webSiteButton: "https://cultivointerpark.vercel.app",
+    },
+    {
+      image: flannerProjectPhoto,
+      title: "Flanner App",
+      description:
+        "Web app developed with Ionic available in Ios and Android.",
+      gitHubButton: "",
+      webSiteButton: "https://app.flanner.lat",
+    },
+    {
       image: tekneDataBot,
       title: "Tekne Data Bot",
       description:
-        "Web page developed business purposes with React, Material UI, Ant Design and OpenAI API.",
-      gitHubButton: '',
+        "Web page developed for business purposes with React, Material UI, Ant Design and OpenAI API.",
+      gitHubButton: "",
       webSiteButton: "https://tekne-data-labs.vercel.app",
     },
     {
       image: reginaPortfolio,
       title: "Regina Padron Portfolio",
-      description:
-        "Portfolio developed with plain HTML.",
+      description: "Portfolio developed with plain HTML.",
       gitHubButton: "https://github.com/elhombrej/lanenaweb.git",
       webSiteButton: "https://reginapadron.vercel.app",
     },
@@ -42,7 +62,7 @@ export function DoneProjects() {
       title: "Ruta Directa",
       description:
         "Web App of geolocalization and map routing with React, Material UI, Ant Design and TomTom API.",
-      gitHubButton: '',
+      gitHubButton: "",
       webSiteButton: "https://ruta-directa.vercel.app",
     },
     {
@@ -140,6 +160,7 @@ export function DoneProjects() {
                 }}
               >
                 <CardMedia
+                  loading="lazy"
                   component="img"
                   alt={element.title}
                   height="140"
@@ -184,7 +205,11 @@ export function DoneProjects() {
                     >
                       {element.gitHubButton !== "" && (
                         <Grid item>
-                          <a href={element.gitHubButton}>
+                          <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href={element.gitHubButton}
+                          >
                             <GitHubIcon
                               sx={{
                                 fontSize: 40,
@@ -197,7 +222,11 @@ export function DoneProjects() {
 
                       {element.webSiteButton !== "" && (
                         <Grid item>
-                          <a href={element.webSiteButton}>
+                          <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href={element.webSiteButton}
+                          >
                             <LaunchIcon
                               sx={{
                                 fontSize: 40,

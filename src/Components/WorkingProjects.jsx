@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
 import coworkingProjectPhoto from "../Images/coworkingProjectPhoto.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -26,10 +20,9 @@ export function WorkingProjects() {
       title: "Ruta Directa",
       description:
         "Web App of geolocalization and map routing with React, Material UI, Ant Design and TomTom API.",
-      gitHubButton: '',
+      gitHubButton: "",
       webSiteButton: "https://ruta-directa.vercel.app",
     },
-
   ];
 
   return (
@@ -71,6 +64,7 @@ export function WorkingProjects() {
                 }}
               >
                 <CardMedia
+                  loading="lazy"
                   component="img"
                   alt={element.title}
                   height="140"

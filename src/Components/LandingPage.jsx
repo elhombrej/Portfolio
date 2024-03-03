@@ -103,11 +103,11 @@ export function LandingPage({ mode, setMode }) {
                 onClick={() => handleClick(<DoneProjects />)}
               />
 
-              <BottomNavigationAction
+              {/* <BottomNavigationAction
                 label="Working projects"
                 icon={<HardwareIcon />}
                 onClick={() => handleClick(<WorkingProjects />)}
-              />
+              /> */}
 
               <BottomNavigationAction
                 label="Knowledge"

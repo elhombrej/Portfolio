@@ -3,21 +3,23 @@ import React from "react";
 
 export function Knowledge() {
   const tecnologies = [
-    '- Node.js',
-    '- NPM',
-    '- axios',
-    '- Express',
-    '- Sequelize',
-    '- React',
-    '- Redux',
-    "- JavaScript ECMASript 6",
-    "- Visual Studio Code",
-    "- PgAdmin4",
-    "- Dbeaver",
+    "- FrontEnd",
+    "- Backend",
+    "- Node.js",
+    "- HTML",
+    "- CSS",
+    "- NPM",
+    "- Express",
+    "- Sequelize",
+    "- React",
+    "- Redux",
+    "- JavaScript",
+    "- TypeScript",
     "- SQL",
     "- Postman",
     "- Bash",
     "- Zsh",
+    "- Mobile Development",
     "- Material UI",
     "- Ant Design",
     "- Vercel",
@@ -28,7 +30,6 @@ export function Knowledge() {
     "- InteliJ IDE",
     "- GIT",
     "- GitHub",
-    "- APIs",
   ];
 
   return (
@@ -38,7 +39,7 @@ export function Knowledge() {
       justifyContent="flex-start"
       alignItems="center"
       paddingTop={3}
-    // spacing={4}
+      // spacing={4}
     >
       <Grid item>
         <Typography
@@ -59,10 +60,6 @@ export function Knowledge() {
           </Typography>
         ))}
       </Grid>
-
-      <Grid item></Grid>
-
-      <Grid item></Grid>
     </Grid>
   );
 }
