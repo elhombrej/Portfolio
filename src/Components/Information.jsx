@@ -71,7 +71,7 @@ export function Information() {
           </Grid>
 
           <Grid item>
-            <a href="https://www.linkedin.com/in/joaquinpadron">
+            <a href="https://www.linkedin.com/in/joaquinpadron" target="_black">
               <Typography
                 sx={{
                   typography: { xs: "body2", sm: "h6", md: "h6" },
@@ -89,7 +89,12 @@ export function Information() {
               }}
               // color='#388e3c'
             >
-              WhatsApp (+54)1138531167
+              <a
+                target="_black"
+                href="https://api.whatsapp.com/send/?phone=59892723943&type=phone_number&app_absent=0"
+              >
+                WhatsApp (+598) 92-723-943
+              </a>
             </Typography>
           </Grid>
         </Grid>
