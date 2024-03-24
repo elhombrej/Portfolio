@@ -32,13 +32,12 @@ export function DoneProjects() {
       description:
         "Web page developed for business purposes with React and Material UI.",
       gitHubButton: "",
-      webSiteButton: "https://cultivointerpark.vercel.app",
+      webSiteButton: "https://cultivointerpark.com.ar",
     },
     {
       image: flannerProjectPhoto,
       title: "Flanner App",
-      description:
-        "Web app developed with Ionic available in Ios and Android.",
+      description: "Web app developed with Ionic available in Ios and Android.",
       gitHubButton: "",
       webSiteButton: "https://app.flanner.lat",
     },
