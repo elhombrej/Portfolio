@@ -83,7 +83,7 @@ export function LandingPage({ mode, setMode }) {
           </Card>
         </Grid>
 
-        <Grid item>
+        <Grid item xs={12}>
           <ins
             class="adsbygoogle"
             style={{ display: "block" }}
@@ -93,6 +93,7 @@ export function LandingPage({ mode, setMode }) {
             data-full-width-responsive="true"
           ></ins>
         </Grid>
+
         <Grid item xs={12}>
           <Paper
             sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
