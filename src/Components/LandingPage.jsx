@@ -7,7 +7,7 @@ import {
   Paper,
   Switch,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
@@ -40,6 +40,10 @@ export function LandingPage({ mode, setMode }) {
   };
 
   const theme = useTheme();
+
+  useEffect(() => {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }, []);
 
   return (
     <Paper
