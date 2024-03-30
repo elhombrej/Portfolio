@@ -79,6 +79,16 @@ export function LandingPage({ mode, setMode }) {
           </Card>
         </Grid>
 
+        <Grid item>
+          <ins
+            class="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-1213560966666293"
+            data-ad-slot="1577681603"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+        </Grid>
         <Grid item xs={12}>
           <Paper
             sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
