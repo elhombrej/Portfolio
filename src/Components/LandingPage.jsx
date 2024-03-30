@@ -86,7 +86,7 @@ export function LandingPage({ mode, setMode }) {
         <Grid item xs={12}>
           <ins
             class="adsbygoogle"
-            style={{ display: "block" }}
+            style={{ display: "block", width: "400px" }}
             data-ad-client="ca-pub-1213560966666293"
             data-ad-slot="1577681603"
             data-ad-format="auto"
